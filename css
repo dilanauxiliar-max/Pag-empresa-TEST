@@ -1,0 +1,50 @@
+.quotation-cart,
+.finalizar-pedido {
+
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+}
+
+.item-form {
+    display: grid;
+    gap: 12px;
+}
+
+.item-form input,
+.item-form textarea {
+
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+
+    background: #0057ff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003ec9;
+}
+
+.item-card {
+
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.btn-finalizar {
+
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+}
