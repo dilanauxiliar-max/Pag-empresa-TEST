@@ -1,0 +1,72 @@
+<section class="quotation-cart">
+
+    <h2>Carrito de Solicitud de Cotización</h2>
+
+    <div class="item-form">
+
+        <input type="text" id="producto"
+            placeholder="Producto o Servicio requerido">
+
+        <textarea id="descripcion"
+            placeholder="Descripción detallada"></textarea>
+
+        <input type="number" id="cantidad"
+            placeholder="Cantidad">
+
+        <input type="text" id="unidad"
+            placeholder="Unidad de medida (UND, M2, KG, etc)">
+
+        <input type="text" id="marca"
+            placeholder="Marca o referencia deseada">
+
+        <label>Fecha requerida</label>
+        <input type="date" id="fecha">
+
+        <label>Fotografía o documento</label>
+        <input type="file" id="archivo"
+            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+
+        <textarea id="comentarios"
+            placeholder="Comentarios adicionales"></textarea>
+
+        <button onclick="agregarItem()">
+            Agregar al Pedido
+        </button>
+
+    </div>
+
+    <hr>
+
+    <h3>Mi Pedido</h3>
+
+    <div id="listaPedidos"></div>
+
+</section>
+
+<section class="finalizar-pedido">
+
+    <h2>Enviar Solicitud</h2>
+
+    <p>
+        Complete sus datos para enviar el pedido al área comercial.
+    </p>
+
+    <input type="text" id="clienteNombre"
+        placeholder="Nombre completo">
+
+    <input type="email" id="clienteEmail"
+        placeholder="Correo electrónico">
+
+    <input type="tel" id="clienteTelefono"
+        placeholder="Teléfono">
+
+    <input type="text" id="empresa"
+        placeholder="Empresa (Opcional)">
+
+    <button class="btn-finalizar"
+        onclick="guardarPedido()">
+        Enviar Pedido
+    </button>
+    <script src="js/cotizacion.js"></script>
+
+</section>
