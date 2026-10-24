@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Empresa</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .contenedor {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        max-width: 500px;
+    }
+
+    h1 {
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .boton {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .boton:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>NOMBRE DE LA EMPRESA</h1>
+    
+    <p>
+        Bienvenido. Haga clic en el botón para escribir y enviar su solicitud o pedido.
+    </p>
+
+    <a href="pedido.html" class="boton">
+        Realizar mi Pedido
+    </a>
+</div>
+
+</body>
+</html>
