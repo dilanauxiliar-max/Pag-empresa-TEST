@@ -158,6 +158,6 @@ function guardarPedido() {
         console.error(error);
 
         alert("Error enviando la solicitud");
+alert("Solicitud enviada correctamente"
     });
 }
-alert("Solicitud enviada correctamente"
