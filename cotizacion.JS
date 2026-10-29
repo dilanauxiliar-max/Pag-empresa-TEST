@@ -107,40 +107,58 @@ function eliminarItem(index) {
 
 function guardarPedido() {
 
-    const solicitud = {
+    const nombre =
+        document.getElementById('clienteNombre').value;
 
-        cliente: {
-            nombre:
-                document.getElementById('clienteNombre').value,
+    const email =
+        document.getElementById('clienteEmail').value;
 
-            email:
-                document.getElementById('clienteEmail').value,
+    const telefono =
+        document.getElementById('clienteTelefono').value;
 
-            telefono:
-                document.getElementById('clienteTelefono').value,
+    const empresa =
+        document.getElementById('empresa').value;
 
-            empresa:
-                document.getElementById('empresa').value
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
         },
+        body: JSON.stringify({
+            access_key: "b4a12725-a66b-4f65-9e08-369656c31ed4",
+            name: nombre,
+            email: email,
+            telefono: telefono,
+            empresa: empresa,
+            message: JSON.stringify(pedidos, null, 2)
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
 
-        pedido: pedidos,
+        console.log(data);
 
-        fechaEnvio:
-            new Date().toISOString()
-    };
+        if (data.success) {
 
-    console.log(solicitud);
+            alert("Solicitud enviada correctamente");
 
-    localStorage.setItem(
-        'ultimaSolicitud',
-        JSON.stringify(solicitud)
-    );
+            pedidos = [];
 
-    alert(
-        'Su solicitud ha sido registrada correctamente.'
-    );
+            localStorage.removeItem(
+                "pedidoCotizacion"
+            );
 
-    window.location.href =
-        '/enviar-pedido.html';
+            mostrarPedidos();
+        }
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+        alert("Error enviando la solicitud");
+    });
+}
 alert("Solicitud enviada correctamente");
 }
