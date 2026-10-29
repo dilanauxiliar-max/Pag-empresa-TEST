@@ -169,10 +169,10 @@ async function guardarPedido() {
         botonEnviar.textContent = "Enviando...";
     }
 
-    const mensajePedidos = pedidos
-        .map((item, index) => {
-            return `
+   const mensajePedido = pedidos.map((item, index) => {
+return `
 PRODUCTO ${index + 1}
+ 
 Producto: ${item.producto}
 Descripción: ${item.descripcion || "No especificada"}
 Cantidad: ${item.cantidad} ${item.unidad}
@@ -180,9 +180,8 @@ Marca: ${item.marca || "No especificada"}
 Fecha requerida: ${item.fecha || "No especificada"}
 Archivo: ${item.archivo || "No adjuntado"}
 Comentarios: ${item.comentarios || "Sin comentarios"}
-            `.trim();
-        })
-        .join("\n\n--------------------------\n\n");
+`.trim();
+}).join("\n\n--------------------------------\n\n");
 
     try {
         const response = await fetch(
@@ -196,12 +195,12 @@ Comentarios: ${item.comentarios || "Sin comentarios"}
                 body: JSON.stringify({
                     access_key: "b4a12725-a66b-4f65-9e08-369656c31ed4",
                     subject: `Nueva solicitud de cotización de ${nombre}`,
-                    from_name: nombre,
+                    from_name: "Formulario de Cotizaciones",
                     name: nombre,
                     email: email,
                     telefono: telefono,
                     empresa: empresa,
-                    message: mensajePedidos
+                    message: mensajePedido
                 })
             }
         );
