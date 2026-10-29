@@ -119,7 +119,7 @@ function guardarPedido() {
     const empresa =
         document.getElementById('empresa').value;
 
-    fetch("https://api.web3forms.com/submit", {
+    fetch("https://api.web3forms.com/submit",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
