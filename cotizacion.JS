@@ -142,17 +142,5 @@ function guardarPedido() {
 
     window.location.href =
         '/enviar-pedido.html';
+alert("Solicitud enviada correctamente");
 }
-
-window.onload = () => {
-
-    const guardado =
-        localStorage.getItem('pedidoCotizacion');
-
-    if (guardado) {
-
-        pedidos = JSON.parse(guardado);
-
-        mostrarPedidos();
-    }
-};
