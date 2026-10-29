@@ -160,4 +160,3 @@ function guardarPedido() {
         alert("Error enviando la solicitud");
 alert("Solicitud enviada correctamente"
     });
-}
